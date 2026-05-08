@@ -12,3 +12,20 @@ html,body{
 body {
   font-family: 'Anek Tamil', sans-serif;
 }
+.bigbox{
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.paal{
+    color: red;
+}
+.chapters{
+    color:violet
+}
