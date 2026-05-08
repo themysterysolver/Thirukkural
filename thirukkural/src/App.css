@@ -1,0 +1,14 @@
+.headerr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+html,body{
+    margin: 0;
+    padding: 0;
+}
+/* Apply Anek Tamil to the whole body or specific class */
+body {
+  font-family: 'Anek Tamil', sans-serif;
+}
