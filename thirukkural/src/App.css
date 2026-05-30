@@ -6,7 +6,9 @@
 }
 html,body{
     margin: 0;
+    margin-top: 1%;
     padding: 0;
+    height: 100%;
 }
 /* Apply Anek Tamil to the whole body or specific class */
 body {
@@ -28,4 +30,21 @@ body {
 }
 .chapters{
     color:violet
+}
+.kuralContainer{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding-left: 5%;
+    padding-right: 5%;
+    /* border: solid 10px black; */
+    flex-direction: column;
+}
+.numbering{
+    height: 100%;
+    min-width: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
 }
