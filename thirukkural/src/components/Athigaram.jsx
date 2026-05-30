@@ -18,7 +18,7 @@ const Athigaram = (data) => {
     <>
         <Header/>
         <div className="kuralContainer">
-            <h1 onClick={()=>nav("/")}>{number}. {name}</h1>
+            <h1 onClick={()=>nav("/")}>{flipVal?`${number} .${translation} (${transliteration})`:`${number}. ${name}`}</h1>
             {/* make sure {}  returns something*/}
             <br/>
             <div className="accordion" id="accordionPanelsStayOpenExample">
