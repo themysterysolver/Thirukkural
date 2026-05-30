@@ -14,8 +14,8 @@ function Root(){
       <BrowserRouter>
         <FlipContext.Provider value={{flipVal,flipIt}}>
         <Routes>
-            <Route path = "/" element={<App/>} />
-            <Route path="/athigaram" element={<Athigaram/>} />
+            <Route path = "/Thirukkural/" element={<App/>} />
+            <Route path="/Thirukkural/athigaram" element={<Athigaram/>} />
         </Routes>
         </FlipContext.Provider>
       </BrowserRouter>

@@ -16,7 +16,7 @@ const BigBox = ({ data }) => {
                      <React.Fragment key={item.name}>
                         <tr className="chapters table-info">{flipVal?<td>{item.translation} ({item.transliteration})</td>:<td>{item.name}</td>}</tr>
                         {item.chapters.detail.map((athigaram,index)=>{
-                            return(<tr onClick = {()=>nav('/Athigaram',{state: athigaram})}>{flipVal?<td>{athigaram.translation} ({athigaram.transliteration}) </td>:<td>{athigaram.number}. {athigaram.name}</td>}</tr>)
+                            return(<tr onClick = {()=>nav('/Thirukkural/Athigaram',{state: athigaram})}>{flipVal?<td>{athigaram.translation} ({athigaram.transliteration}) </td>:<td>{athigaram.number}. {athigaram.name}</td>}</tr>)
                         })}
                     </React.Fragment>
                 )

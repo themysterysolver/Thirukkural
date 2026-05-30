@@ -11,7 +11,7 @@ const Headerr = () => {
     <>
     {/* <h1>wow</h1> */}
       <div className="headerr">
-        <h1  onClick={()=>nav("/")}>{data[0]['tamil']}</h1>
+        <h1  onClick={()=>nav("/Thirukkural/")}>{data[0]['tamil']}</h1>
         <button type="button" className="btn btn-danger" onClick={()=>{flipIt(prev=>!prev)}}>{flipVal?"Tamil":"English"}</button>
       </div>
     </>
