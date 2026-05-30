@@ -2,6 +2,8 @@ import React from 'react'
 import Header from './Headerr'
 import {useLocation, useNavigate} from 'react-router-dom';
 import kurals from '../assets/thirukkural.json'
+import FlipContext from './FlipContext';
+import { useContext } from 'react'
 
 const Athigaram = (data) => {
     //console.log(data);
@@ -10,6 +12,8 @@ const Athigaram = (data) => {
     //we can either use [] or . to access the properties.
     const kural = kurals.kural.filter((item)=>item.Number>=start && item.Number<=end); 
     const nav = useNavigate();
+
+    let {flipVal} = useContext(FlipContext);
     return (
     <>
         <Header/>
@@ -26,16 +30,35 @@ const Athigaram = (data) => {
                         <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#collapse${block.Number}`} aria-expanded="true" aria-controls={`collapse${block.Number}`}>
                             <div className="numbering">{block.Number}</div>
                             <div className='kurals'>
-                                <p>{block.Line1}</p>
-                                <p>{block.Line2}</p>
+                                {flipVal? <>
+                                    <p>{block.transliteration1}</p>
+                                    <p>{block.transliteration2}</p>
+                                    ({block.Translation})
+                                    </>
+                                    :
+                                    <>
+                                    <p>{block.Line1}</p>
+                                    <p>{block.Line2}</p>
+                                    </>
+                                }
                             </div>
                         </button>
                         </h2>
                         <div id={`collapse${block.Number}`} className="accordion-collapse collapse">
                         <div className="accordion-body">
-                            {block.mv}
-                            {block.sp}
-                            {block.mk}
+                            {
+                            flipVal?
+                            <>
+                            <p>{block.couplet}</p>
+                            <p>{block.explanation}</p>
+                            </>
+                            :
+                            <>
+                            <p>{block.mv}</p>
+                            <p>{block.sp}</p>
+                            <p>{block.mk}</p>
+                            </>
+                            }   
                         </div>
                         </div>
                     </div>
