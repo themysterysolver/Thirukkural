@@ -4,6 +4,9 @@
     align-items: center;
 
 }
+#root{
+    height: 100%;
+}
 html,body{
     margin: 0;
     margin-top: 1%;
@@ -19,11 +22,7 @@ body {
     align-items: center;
 }
 .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    height: 100%;
 }
 .paal{
     color: red;
@@ -47,4 +46,8 @@ body {
     justify-content: left;
     align-items: center;
 
+}
+.mainContainer{
+    padding-left: 10%;
+    padding-right:10%;
 }

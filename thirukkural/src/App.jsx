@@ -9,10 +9,13 @@ function App() {
   return (
     <>
       <Headerr />
-      <div className="container">
-        <BigBox data={data[0].section.detail[0]}/>
-        <BigBox data={data[0].section.detail[1]}/>
-        <BigBox data={data[0].section.detail[2]}/>
+      <br/>
+      <div className="mainContainer">
+        <table className="table">
+          <tbody><BigBox data={data[0].section.detail[0]}/></tbody>
+          <tbody><BigBox data={data[0].section.detail[1]}/></tbody>
+          <tbody><BigBox data={data[0].section.detail[2]}/></tbody>
+        </table>
       </div>
     </>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Headerr'
-import {useLocation} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import kurals from '../assets/thirukkural.json'
 
 const Athigaram = (data) => {
@@ -9,11 +9,12 @@ const Athigaram = (data) => {
     const {start,end,name,number,translation,transliteration} = location.state || {};
     //we can either use [] or . to access the properties.
     const kural = kurals.kural.filter((item)=>item.Number>=start && item.Number<=end); 
+    const nav = useNavigate();
     return (
     <>
         <Header/>
         <div className="kuralContainer">
-            <h1>{number}. {name}</h1>
+            <h1 onClick={()=>nav("/")}>{number}. {name}</h1>
             {/* make sure {}  returns something*/}
             <br/>
             <div className="accordion" id="accordionPanelsStayOpenExample">
