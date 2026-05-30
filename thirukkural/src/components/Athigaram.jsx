@@ -23,7 +23,7 @@ const Athigaram = (data) => {
             <br/>
             <div className="accordion" id="accordionPanelsStayOpenExample">
             {kural.map((block)=>{
-                return(<>
+                return(
                     <React.Fragment key={block.Number}>
                     <div className="accordion-item">
                         <h2 className="accordion-header">
@@ -64,7 +64,7 @@ const Athigaram = (data) => {
                     </div>
                 <br></br>
                 </React.Fragment>
-                </>)
+                )
                 })}
             </div>
         </div>
